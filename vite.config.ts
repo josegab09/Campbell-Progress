@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      // O path.resolve garante que o "@" aponte para a pasta certa independente de onde o site estiver rodando
+      // Ajuste definitivo para a Vercel encontrar suas pastas
       "@": path.resolve(__dirname, "client/src"),
       "@shared": path.resolve(__dirname, "shared"),
       "@assets": path.resolve(__dirname, "attached_assets"),
@@ -14,7 +14,7 @@ export default defineConfig({
   },
   root: "client",
   build: {
-    // Ajustado para a Vercel encontrar a saída do site na raiz
+    // Direciona a saída do site para a pasta que a Vercel espera
     outDir: "../dist",
     emptyOutDir: true,
   },
